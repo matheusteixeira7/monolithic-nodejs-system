@@ -1,4 +1,4 @@
-import ProductGateway from '../../domain/gateway/product.gateway'
+import ProductGateway from '../../gateway/product.gateway'
 import { CheckStockInputDto, CheckStockOutputDto } from './check-stock.dto'
 
 export default class CheckStockUseCase {
