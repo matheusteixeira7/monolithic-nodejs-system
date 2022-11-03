@@ -1,4 +1,3 @@
-import Product from '../domain/product.entity'
 import FindAllProductsUseCase from '../usecase/find-all-products/find-all-products.usecase'
 import FindProductUseCase from '../usecase/find-product/find-product.usecase'
 import StoreCatalogFacadeInterface, {
