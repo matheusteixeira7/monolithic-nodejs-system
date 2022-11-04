@@ -26,4 +26,24 @@ describe('Add Client usecase unit test', () => {
         expect(result.email).toBe(input.email)
         expect(result.address).toBe(input.address)
     })
+
+    it('should add a client passing an id in props', async () => {
+        const repository = MockRepository()
+        const usecase = new AddClientUseCase(repository)
+
+        const input = {
+            id: '1',
+            name: 'John Doe',
+            email: 'doe@email.com',
+            address: '1234 Street',
+        }
+
+        const result = await usecase.execute(input)
+
+        expect(repository.add).toHaveBeenCalled()
+        expect(result.id).toBe(input.id)
+        expect(result.name).toBe(input.name)
+        expect(result.email).toBe(input.email)
+        expect(result.address).toBe(input.address)
+    })
 })
